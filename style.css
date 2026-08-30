@@ -1,0 +1,86 @@
+/* =========================
+   Global
+   ========================= */
+
+body {
+    background: #0a0a0a;
+    color: #ff9de2;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+/* =========================
+   Headings
+   ========================= */
+
+h1 {
+    color: #ff4fc3;
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #ff6dcc;
+    margin-top: 50px;
+    border-bottom: 1px solid #522044;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #ff9de2;
+}
+
+/* =========================
+   Paragraphs
+   ========================= */
+
+p {
+    color: #e6a8d0;
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+    color: #ff6dcc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffb5e7;
+    text-shadow: 0 0 8px #ff4fc3;
+}
+
+/* =========================
+   Lists
+   ========================= */
+
+li {
+    margin: 8px 0;
+}
+
+/* =========================
+   Horizontal rules
+   ========================= */
+
+hr {
+    border: none;
+    border-top: 1px solid #522044;
+    margin: 35px 0;
+}
+
+/* =========================
+   Code
+   ========================= */
+
+code {
+    color: #ffb5e7;
+    background: #151015;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
