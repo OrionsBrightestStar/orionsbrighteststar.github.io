@@ -84,3 +84,99 @@ code {
     padding: 2px 5px;
     border-radius: 3px;
 }
+
+/* =========================
+   Mathematical Environments
+   ========================= */
+
+.math-box {
+    margin: 30px 0;
+    padding: 20px 24px;
+    border-left: 4px solid #ff4fc3;
+    background: #120d12;
+    border-radius: 4px;
+}
+
+.math-box .box-title {
+    color: #ff4fc3;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.math-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Theorem */
+
+.theorem {
+    border-left-color: #ff4fc3;
+}
+
+.theorem .box-title {
+    color: #ff4fc3;
+}
+
+
+/* Proposition */
+
+.proposition {
+    border-left-color: #ff6dcc;
+}
+
+.proposition .box-title {
+    color: #ff6dcc;
+}
+
+
+/* Definition */
+
+.definition {
+    border-left-color: #ff9de2;
+}
+
+.definition .box-title {
+    color: #ff9de2;
+}
+
+
+/* Lemma */
+
+.lemma {
+    border-left-color: #d98bc5;
+}
+
+.lemma .box-title {
+    color: #d98bc5;
+}
+
+
+/* Corollary */
+
+.corollary {
+    border-left-color: #eab0dc;
+}
+
+.corollary .box-title {
+    color: #eab0dc;
+}
+
+
+/* Proof */
+
+.proof {
+    border-left-color: #806078;
+    background: #0e0b0e;
+}
+
+.proof .box-title {
+    color: #c98bb9;
+}
+
+.qed {
+    text-align: right;
+    color: #ff9de2;
+    margin-top: 12px;
+}
