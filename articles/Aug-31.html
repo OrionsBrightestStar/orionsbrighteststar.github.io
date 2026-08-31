@@ -53,16 +53,62 @@
     <h1>August 31, 2026: Paracompactness</h1>
 
     <p>
-        <em>Geometry &amp; Topology</em>
+        <em>Topology · Blog Entry</em>
     </p>
 
     <hr>
 
-    <h2>1. Introduction</h2>
+    <h2>1. A Bit About My Day Today</h2>
 
     <p>
-        Differential forms provide a powerful language for studying
-        geometry and analysis on smooth manifolds.
+        So, today, I actually didn't really do much, to be honest. I woke up bright and early, around 8 if my memory serves me correctly, and I served myself pancakes for breakfast from the RoMa dining hall. 
+    </p>
+
+    <p>
+        After eating breakfast, I received a text from one of my friends, Lex, essentially asking me if I wanted to study some algebraic topology at Fine Hall today. I obliged, and headed over to Fine Hall. There, I met Professor Ozsvath, who teaches MAT 216 (Multivariable Analysis and Linear Algebra I), which I have skipped due to the permission of Professor McConnell, the placement officer. 
+    </p>
+
+    <p>
+        To be honest, not much studying was going on then. But I did meet another friend, Petr, who I lent my Gunning analysis book. Then, I went to go get lunch with Lex at the Whitman dining hall.
+    </p>
+
+    <p>
+        That afternoon, I didn't do much. I called my parents, and then took a nap. I was woken up by my roommate, Kofi, so that I would be able to make it to the Step Sing!
+    </p>
+
+    <p>
+        "What's the Step Sing?" you might ask. Well, it is a Princeton tradition that the entire freshman class comes together at the steps of the Blair Arch and sings some traditional Princeton songs as well as songs chosen by the class, such as Viva La Vida and other songs which I cannot remember. I was the only one around me who knew Princeton's fight song, the Princeton Cannon. 
+    </p>
+
+    <p>
+        I also met one of my other friends, Ioanna, who was looking to borrow copies of Needham's books (on both complex analysis and differential geometry). I ate dinner at the RoMa dining hall, and here I am, writing this. I intend on reviewing paracompactness now or perhaps later, and I will also be participating (as an audience member) in the Clash of the Colleges, in which all the students from each residential college (there are 7 at Princeton) compete in various events. 
+    </p>
+
+    <h2>2. A Review of Paracompactness</h2>
+
+    <p>
+        Now onto the real stuff. Let us review some topics from paracompactness. These are my informal notes; they will not be as polished as the ones in pdf format.
+    </p>
+
+    <p>
+        Here, we discuss the notion of paracompactness. The reader is hopefully familiar with the notion of compactness, in which every open covering admits a finite subcovering. Paracompactness is similar in some ways, but also different. Its main use is that a paracompact space may always admit a partition of unity, which is important in manifold theory. In fact, differentiable manifolds are often defined as a second-countable paracompact topological manifold. To be honest, I learned it the old-fashioned way from Do Carmo which involves coordinate charts and so on (I think this is a better way for those who do not know topology as well), but I will admit that the more topological definition of a differentiable manifold is much cleaner.
+    </p>
+
+    <p>
+        First, a little bit of preliminary definitions.
+    </p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 1 (Refinement)
+        </div>
+        <p>
+            Suppose that we have open coverings $\textbf{U}$ and $\textbf{V}$ of some topological space. We say that $\textbf{U}$ is a refinement of $\textbf{V}$ if for all $U \in \textbf{U}$, there exists $V \in \textbf{V}$ such that $U \subset V$.
+        </p>
+    </div>
+
+    <p>
+        In other words, a refinement of an open covering is another open covering where all sets are "smaller," or perhaps finer (specifically subsets) than the first open covering.
     </p>
 
     <p>
