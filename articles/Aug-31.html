@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>An Introduction to Differential Forms</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- MathJax -->
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+
+    <script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../index.html">HOME</a>
+        &nbsp; | &nbsp;
+        <a href="../index.html">EXPOSITION</a>
+    </nav>
+
+    <hr>
+
+    <h1>An Introduction to Differential Forms</h1>
+
+    <p>
+        <em>Geometry &amp; Topology</em>
+    </p>
+
+    <hr>
+
+    <h2>1. Introduction</h2>
+
+    <p>
+        Differential forms provide a powerful language for studying
+        geometry and analysis on smooth manifolds.
+    </p>
+
+    <p>
+        Let $M$ be a smooth manifold. A differential $k$-form on $M$
+        is a smooth section of
+        $\Lambda^k(T^*M)$.
+    </p>
+
+    <div class="math-box definition">
+
+        <div class="box-title">
+            Definition 1.1 (Differential Form)
+        </div>
+
+        <p>
+            A differential $k$-form on a smooth manifold $M$ is a
+            smooth section of the bundle $\Lambda^k(T^*M)$.
+        </p>
+
+    </div>
+
+    <h2>2. The Exterior Derivative</h2>
+
+    <p>
+        The exterior derivative is an operator
+        $$
+        d:\Omega^k(M)\longrightarrow\Omega^{k+1}(M)
+        $$
+        satisfying $d^2=0$.
+    </p>
+
+    <div class="math-box theorem">
+
+        <div class="box-title">
+            Theorem 2.1
+        </div>
+
+        <p>
+            For every differential form $\omega$,
+            $$
+            d(d\omega)=0.
+            $$
+        </p>
+
+    </div>
+
+    <div class="math-box proof">
+
+        <div class="box-title">
+            Proof.
+        </div>
+
+        <p>
+            This follows directly from the defining properties of the
+            exterior derivative.
+        </p>
+
+        <div class="qed">□</div>
+
+    </div>
+
+</body>
+</html>
