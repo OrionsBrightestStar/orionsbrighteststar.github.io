@@ -157,6 +157,25 @@
         <p>
             Suppose $A$ is the closed subspace we are referring to, and $X$ is the paracompact space. Let us cover $A$ with sets that are open in $X$, and include the set $X-A$, which is open. We have thus created an open covering of $X$. Therefore, by paracompactness, we may take a locally finite refinement of the open covering with $X$. Now, take the intersection of each of these sets in the refinement with $A$. It is still locally finite, but now it is a refinement of the original covering of $A$. Let me convince you why this is true. Consider a set in our original covering of $A$. We refine it, and we consider a new set (if it exists) that is a subset of the old set. Intersecting this new set with $A$ gives us a newer set, which is still a subset of the old set. Therefore, our new covering must be a refinement of the original covering of $A$. Furthermore, since the refinement of $X$ is locally finite, simply intersecting each set with $A$ does not change the fact that the refinement is locally finite, as, colloquially speaking, the sets are only getting smaller, so each point in $A$ will have a neighborhood intersecting even less points, if anything. Hopefully this explanation sort of makes sense.
         </p>
+        <div class="qed">□</div>
+    </div>
+
+    <div class="math-box theorem">
+        <div class="box-title">
+            Theorem 1
+        </div>
+        <p>
+            A paracompact space is normal.
+        </p>
+    </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+        <p>
+            First, we must show that a paracompact space $X$ is regular (recall what that means). So, suppose we have $x \in X$ and a closed $C \subset X$ such that $x \not\in C$. Consider that for all $y \in C$, since a paracompact space is Hausdorff, we may create disjoint open sets $U_y$ and $V_y$ such that $x \in U_y$ and $y \in V_y$. We can create a covering of $X$ by considering all $V_y$ and then $X-C$, as $C$ is surely contained in the union of $V_y$. By paracompactness, there is an open locally finite refinement, which we will denote by the sets $U_\alpha$. Now, we consider the set $$U = \bigcup \{U_\alpha \mid U_\alpha \subset \text{some }V_y\}$$ which is the set of 
+        </p>
     </div>
 </body>
 </html>
