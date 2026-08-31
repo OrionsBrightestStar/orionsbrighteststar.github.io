@@ -103,7 +103,7 @@
             Definition 1 (Refinement)
         </div>
         <p>
-            Suppose that we have open coverings $\textbf{U}$ and $\textbf{V}$ of some topological space. We say that $\textbf{U}$ is a refinement of $\textbf{V}$ if for all $U \in \textbf{U}$, there exists $V \in \textbf{V}$ such that $U \subset V$.
+            Suppose that we have open coverings $\textbf{U}$ and $\textbf{V}$ of some topological space. We say that $\textbf{U}$ is a <bf>refinement</bf> of $\textbf{V}$ if for all $U \in \textbf{U}$, there exists $V \in \textbf{V}$ such that $U \subset V$.
         </p>
     </div>
 
@@ -111,64 +111,52 @@
         In other words, a refinement of an open covering is another open covering where all sets are "smaller," or perhaps finer (specifically subsets) than the first open covering.
     </p>
 
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 2 (Locally Finite)
+        </div>
+        <p>
+            Suppose that we have a collection $\textbf{U}$ of subsets of a topological space $X$. We say that $\textbf{U}$ is <bf>locally finite</bf> if for all $x\in X$, there exists a neighborhood $N \ni x$ such that there is only a finite amount of subsets $U \in \textbf{U}$ such that $N \cap U \not= \emptyset$.
+        </p>
+    </div>
+
     <p>
-        Let $M$ be a smooth manifold. A differential $k$-form on $M$
-        is a smooth section of
-        $\Lambda^k(T^*M)$.
+        This is a pretty complicated definition. What it means in plain language, is that, a collection of subsets is locally finite if every point in the space has some neighborhood around it that intersects only a finite amount of subsets in the aforementioned collection. This definition might seem rather contrived at first, but just wait. It is important to define paracompactness.
+    </p>
+
+    <p>
+        Now we come to what we have been waiting for: paracompactness.
     </p>
 
     <div class="math-box definition">
-
         <div class="box-title">
-            Definition 1.1 (Differential Form)
+            Definition 3 (Paracompactness)
         </div>
-
         <p>
-            A differential $k$-form on a smooth manifold $M$ is a
-            smooth section of the bundle $\Lambda^k(T^*M)$.
+            A <bf>paracompact</bf> space is a Hausdorff topological space such that every open covering has an open, locally finite refinement.
         </p>
-
     </div>
 
-    <h2>2. The Exterior Derivative</h2>
-
     <p>
-        The exterior derivative is an operator
-        $$
-        d:\Omega^k(M)\longrightarrow\Omega^{k+1}(M)
-        $$
-        satisfying $d^2=0$.
+        Recall that a Hausdorff space is one in which any two points can have two disjoint open sets, with one set including one point, the other including the other. So, a paracompact space is one in which, if we have any open covering, we can find a covering where each set is a subset of one of the sets in the first collection such that if we take any point, a neighborhood of that point intersects only a finite number of those sets in the new covering. Does that sort of make sense? 
     </p>
 
-    <div class="math-box theorem">
-
+    <div class="math-box proposition">
         <div class="box-title">
-            Theorem 2.1
+            Proposition 1
         </div>
-
         <p>
-            For every differential form $\omega$,
-            $$
-            d(d\omega)=0.
-            $$
+            A closed subspace of a paracompact space is paracompact.
         </p>
-
     </div>
 
     <div class="math-box proof">
-
         <div class="box-title">
             Proof.
         </div>
-
         <p>
-            This follows directly from the defining properties of the
-            exterior derivative.
+            Suppose $A$ is the closed subspace we are referring to, and $X$ is the paracompact space. Let us cover $A$ with sets that are open in $X$, and include the set $X-A$, which is open. We have thus created an open covering of $X$. Therefore, by paracompactness, we may take a locally finite refinement of the open covering with $X$. Now, take the intersection of each of these sets in the refinement with $A$. It is still locally finite, but now it is a refinement of the original covering of $A$. Let me convince you why this is true. Consider a set in our original covering of $A$. We refine it, and we consider a new set (if it exists) that is a subset of the old set. Intersecting this new set with $A$ gives us a newer set, which is still a subset of the old set. Therefore, our new covering must be a refinement of the original covering of $A$. Furthermore, since the refinement of $X$ is locally finite, simply intersecting each set with $A$ does not change the fact that the refinement is locally finite, as, colloquially speaking, the sets are only getting smaller, so each point in $A$ will have a neighborhood intersecting even less points, if anything. Hopefully this explanation sort of makes sense.
         </p>
-
-        <div class="qed">□</div>
-
     </div>
-
 </body>
 </html>
