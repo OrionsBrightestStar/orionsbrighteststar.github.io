@@ -95,6 +95,67 @@
             <li>$\sum_\beta f_\beta (x) = 1$ for all $x\in X$.</li>
         </ol>
     </div>
+
+    <p>
+        I will omit the proof for this next theorem.
+    </p>
+
+    <div class="math-box theorem">
+        <div class="box-title">
+            Theorem 1
+        </div>
+        <p>
+            If $X$ is paracompact and $\textbf{U}$ is an open covering of $X$, then there exists a partition of unity subordinate to $\textbf{U}$. Furthermore, if $\{U_\alpha\}$ is a locally finite open covering of $X$, then there is an open covering $\{V_\alpha\}$ such that, for each $\alpha$, $\overline{V}_\alpha \subset U_\alpha$.
+        </p>
+    </div>
+
+    <p>
+        We now consider the last definition for today, which is on $\sigma$-compactness.
+    </p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 3 ($\sigma$-compactness)
+        </div>
+        <p>
+            A space is $\sigma$-compact if it can be considered to be the union of a countable number of compact subspaces. 
+        </p>
+    </div>
+
+    <p>
+        For example, the set of rational numbers is $\sigma$-compact. The next theorem, I will omit the proof, but the theorem after, I will supply the proof.
+    </p>
+
+    <div class="math-box theorem">
+        <div class="box-title">
+            Theorem 2
+        </div>
+        <p>
+            A locally compact, Hausdorff space is paracompact if and only if it is the disjoint union of open $\sigma$-compact subsets.
+        </p>
+    </div>
+
+    <p>
+        Recall that a locally compact space is a topological space such that each point has a compact neighborhood (in this case, a neighborhood is not necessarily open, there just needs to be some open set that is a subset of the neighborhood with the point in the open set. Anyways, moving on,
+    </p>
+
+    <div class="math-box theorem">
+        <div class="box-title">
+            Theorem 3
+        </div>
+        <p>
+            If $X$ is locally compact, Hausdorff, and second countable then its one-point compactification $X^+$ is metrizable and $X$ is $\sigma$-compact and paracompact.
+        </p>
+    </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+        <p>
+            Since $X$ is second countable, then we may have a countable basis $\textbf{B}$ for $X$. Now, suppose $C \subset X$ is compact. Since $X$ is locally compact, any point $x \in C$ has a compact neighborhood $N$ aroun dit, and therefore there exists some $U_x \in \textbf{B}$ such that $x \in U_x \subset N$. Therefore, since every point is a subset of some $U_x$ in the basis, then $C$ is covered by a finite union $U_{x_1} \cup \cdots \cup U_{x_n}$, since $C$ is compact. Let $V = X - \bigcup \overline{U}_{x_i}$, which is the set of all points in $X$ not covered by the closures of one of the $U_x$ open sets. Consider the set $V \cup \{\infty\}$, which is a neighborhood of $\infty$ in the one-point compactification of $X$, $X^+$, which is contained in the neighborhood $X^+-C$. Now consider all the possible sets $C$ and all the possible choices of finite collections of basis elements. There are many sets $V$. We can index them by finite subsets of $\textbf{B}$; that is, for each finite subset of $\textbf{B}$, there is some compact set $C$ associated with it as well as a set $V$ constructed from both. Therefore, since the set of finite subsets of $\textbf{B}$ (which is countable) is countable (one can see a book on set theory to prove this fact, but it is a very trivial corollary of Cantor's Diagonalization Theorem), then all the sets $V$ are countable as well. $V$ allows us to create a local basis around the point $\infty$, so that combined with $\textbf{B}$ gives us a countable basis of $X^+$. Therefore, $X^+$ is second-countable. $X$ is apparently $\sigma$-compact as well, though I can't seem to grasp why. Using the previous theorem (the backwards direction), $X$ is paracompact. Furthermore, note that a compact Hausdorff space is normal (a previous result). A normal space is also completely regular, and finally, by the Urysohn Metrization Theorem, a space that is second countable and completely regular is metrizable. Hence, $X^+$ is metrizable. 
+        </p>
+    </div>
   
 </body>
 </html>
