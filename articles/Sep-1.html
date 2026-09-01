@@ -155,6 +155,7 @@
         <p>
             Since $X$ is second countable, then we may have a countable basis $\textbf{B}$ for $X$. Now, suppose $C \subset X$ is compact. Since $X$ is locally compact, any point $x \in C$ has a compact neighborhood $N$ aroun dit, and therefore there exists some $U_x \in \textbf{B}$ such that $x \in U_x \subset N$. Therefore, since every point is a subset of some $U_x$ in the basis, then $C$ is covered by a finite union $U_{x_1} \cup \cdots \cup U_{x_n}$, since $C$ is compact. Let $V = X - \bigcup \overline{U}_{x_i}$, which is the set of all points in $X$ not covered by the closures of one of the $U_x$ open sets. Consider the set $V \cup \{\infty\}$, which is a neighborhood of $\infty$ in the one-point compactification of $X$, $X^+$, which is contained in the neighborhood $X^+-C$. Now consider all the possible sets $C$ and all the possible choices of finite collections of basis elements. There are many sets $V$. We can index them by finite subsets of $\textbf{B}$; that is, for each finite subset of $\textbf{B}$, there is some compact set $C$ associated with it as well as a set $V$ constructed from both. Therefore, since the set of finite subsets of $\textbf{B}$ (which is countable) is countable (one can see a book on set theory to prove this fact, but it is a very trivial corollary of Cantor's Diagonalization Theorem), then all the sets $V$ are countable as well. $V$ allows us to create a local basis around the point $\infty$, so that combined with $\textbf{B}$ gives us a countable basis of $X^+$. Therefore, $X^+$ is second-countable. $X$ is apparently $\sigma$-compact as well, though I can't seem to grasp why. Using the previous theorem (the backwards direction), $X$ is paracompact. Furthermore, note that a compact Hausdorff space is normal (a previous result). A normal space is also completely regular, and finally, by the Urysohn Metrization Theorem, a space that is second countable and completely regular is metrizable. Hence, $X^+$ is metrizable. 
         </p>
+        <div class="qed">□</div>
     </div>
 
     <h2>3. A Review of Homotopy</h2>
@@ -182,7 +183,7 @@
             Proposition 1
         </div>
         <p>
-            Suppose $f,g:X \to Y$, $h: X'\to X$ and $k: Y \to Y'$. We have that
+            Suppose $f,g:X \to Y$, $h: X'\to X$ and $k: Y \to Y'$ are all continuous. We have that
             $$f \simeq g \implies f \circ h \simeq g \circ h \text{ and }k \circ f \simeq k \circ g$$
         </p>
     </div>
@@ -191,6 +192,10 @@
         <div class="box-title">
             Proof.
         </div>
+        <p>
+            Suppose that $f \simeq g$. Then there exists some continuous $F: X \times I \to Y$, where $I = [0,1]$, such that $F(x,0)=f(x)$ and $F(x,1)=g(x)$. Consider the map $G: X' \times I \to Y$, where $G(x',t)=F(h(x'),t)$. It is clear due to the continuity of $h$ and $F$ that $G$ is continuous as well, and that $G(x',0)=(f \circ h)(x')$ and $G(x',1)=(g \circ h)(x')$. Therefore, $f \circ h \simeq g \circ h$. A similar argument shows that $k \circ f = k \circ g$. 
+        </p>
+        <div class="qed">□</div>
     </div>
   
 </body>
