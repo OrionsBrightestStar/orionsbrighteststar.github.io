@@ -68,7 +68,33 @@
       Let us continue our discussion of paracompactness. Now, we will begin to see the motivations behind why paracompactness is such a useful tool. Formulated as a sort of alternative to compactness, it carries some useful properties that make it possible to study manifold theory more deeply. We begin with the following definition:
     </p>
 
-    <div class
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 1 (Support)
+        </div>
+        <p>
+            Suppose that $f: S \to \mathbb{R}$ is a mapping from some space $S$ to the real numbers. We say that the support of $f$ is the set $$\text{support}(f) = \text{closure}\{x \mid f(x)\not= 0\}$$
+        </p>
+    </div>
+
+    <p>
+        In other words, it is the set consisting of all the points in the space where $f$ is zero, or $f$ is basically "about" to be zero, in a sort of sense. As it turns out, this allows us to define a concept known as the partition of unity, which is a bunch of maps where at any point there is a neighborhood where only a finite number of maps are nonzero, and the sum of the images of the maps at each point is 1, hence the term partition of "unity."
+    </p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 2 (Partition of Unity)
+        </div>
+        <p>
+            Suppose $\{U_\alpha \mid \alpha \in A\}$ is a sort of open covering of the space $X$. Then, we define a partition of unity subordinate to this covering as a collection of maps
+            $$\{f_\beta: X \to [0,1] \mid \beta \in B\}$$
+            such that the following hold:
+        </p>
+        <ol>
+            <li>There is a locally finite open refinement $\{V_\beta \mid \beta \in B\}$ of our open covering such that $\text{support}(f_\beta)\subset V_\beta$ for all $\beta \in B$, and</li>
+            <li>$\sum_\beta f_\beta (x) = 1$ for all $x\in X$.</li>
+        </ol>
+    </div>
   
 </body>
 </html>
