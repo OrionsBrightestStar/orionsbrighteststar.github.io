@@ -156,6 +156,42 @@
             Since $X$ is second countable, then we may have a countable basis $\textbf{B}$ for $X$. Now, suppose $C \subset X$ is compact. Since $X$ is locally compact, any point $x \in C$ has a compact neighborhood $N$ aroun dit, and therefore there exists some $U_x \in \textbf{B}$ such that $x \in U_x \subset N$. Therefore, since every point is a subset of some $U_x$ in the basis, then $C$ is covered by a finite union $U_{x_1} \cup \cdots \cup U_{x_n}$, since $C$ is compact. Let $V = X - \bigcup \overline{U}_{x_i}$, which is the set of all points in $X$ not covered by the closures of one of the $U_x$ open sets. Consider the set $V \cup \{\infty\}$, which is a neighborhood of $\infty$ in the one-point compactification of $X$, $X^+$, which is contained in the neighborhood $X^+-C$. Now consider all the possible sets $C$ and all the possible choices of finite collections of basis elements. There are many sets $V$. We can index them by finite subsets of $\textbf{B}$; that is, for each finite subset of $\textbf{B}$, there is some compact set $C$ associated with it as well as a set $V$ constructed from both. Therefore, since the set of finite subsets of $\textbf{B}$ (which is countable) is countable (one can see a book on set theory to prove this fact, but it is a very trivial corollary of Cantor's Diagonalization Theorem), then all the sets $V$ are countable as well. $V$ allows us to create a local basis around the point $\infty$, so that combined with $\textbf{B}$ gives us a countable basis of $X^+$. Therefore, $X^+$ is second-countable. $X$ is apparently $\sigma$-compact as well, though I can't seem to grasp why. Using the previous theorem (the backwards direction), $X$ is paracompact. Furthermore, note that a compact Hausdorff space is normal (a previous result). A normal space is also completely regular, and finally, by the Urysohn Metrization Theorem, a space that is second countable and completely regular is metrizable. Hence, $X^+$ is metrizable. 
         </p>
     </div>
+
+    <h2>3. A Review of Homotopy</h2>
+
+    <p>Homotopy is a pivotal tool in algebraic topology, and we begin to see it in its most basic form. A homotopy is essentially a bunch of mappings that vary continuously, from one mapping to another. More precisely, what I mean is this:</p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 4 (Homotopy)
+        </div>
+        <p>
+            Suppose $X$ and $Y$ are topological spaces. A homotopy of maps from $X$ to $Y$ is a continuous map $F: X \times [0,1] \to Y$, where we recall that $\times$ is the Cartesian product.
+        </p>
+        <p>
+            Furthermore, two maps $f_0,f_1:X \to Y$ are homotopic if there exists some homotopy $F:X \times [0,1] \to Y$ such that $F(x,0)=f_0(x)$ and $F(x,1)=f_1(x)$ for all $x \in X$.
+        </p>
+    </div>
+
+    <p>
+        Note that homotopy defines an equivalence relation, where "$f$ is homotopic to $g$" is written as $f \simeq g$.
+    </p>
+
+    <div class="math-box proposition">
+        <div class="box-title">
+            Proposition 1
+        </div>
+        <p>
+            Suppose $f,g:X \to Y$, $h: X'\to X$ and $k: Y \to Y'$. We have that
+            $$f \simeq g \implies f \circ h \simeq g \circ h \text{ and }k \circ f \simeq k \circ g$$
+        </p>
+    </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+    </div>
   
 </body>
 </html>
