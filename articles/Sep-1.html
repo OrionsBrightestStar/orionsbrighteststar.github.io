@@ -197,6 +197,55 @@
         </p>
         <div class="qed">□</div>
     </div>
+
+    <p>
+        To continue our discussion of homotopy, we propose the following definition of homotopy equivalence, not between two maps, but between two topological spaces.
+    </p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 5 (Homotopy Equivalence)
+        </div>
+        <p>
+            A homotopy equivalence is a continuous map $f: X \to Y$ between two topological spaces with a homotopy inverse $g: Y \to X$ such that $g \circ f \simeq 1_X$ and $f \circ g \simeq 1_Y$, where $1_X$ is the identity function on $X$. If this is true, we say that $X \simeq Y$, or that $X$ and $Y$ have the same homotopy type.
+        </p>
+    </div>
+
+    <p>
+        One will be able to check that this is an equivalence relation between topological spaces as well, for we have that $X \simeq X$, if $X \simeq Y$ then $Y \simeq X$, and if $X \simeq Y$ and $Y \simeq Z$ then $X \simeq Z$. We now define contractibility, which is essentially a space that can be "deformed" into just one point. 
+    </p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 6 (Contractibility)
+        </div>
+        <p>
+            A topological space $X$ is contractible if it is homotopy equivalent to a topological space consisting of just one point.
+        </p>
+    </div>
+
+    <p>
+        We now consider and prove the following proposition.
+    </p>
+
+    <div class="math-box proposition">
+        <div class="box-title">
+            Proposition 2
+        </div>
+        <p>
+            A topological space $X$ is contractible if and only if the identity map $1_X: X \to X$ is homotopic to a map $r: X \to X$ whose image is just a single point.
+        </p>
+    </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+        <p>
+            Suppose $X$ is contractible. We wish to show that the identity map is homotopic to $r$. So, let $Y = \{ x_0\}=\text{im}(r)$. We have the retraction $r: X \to Y \subset S$, and the inclusion map $i: Y \to X$. Notice that $i \circ r \simeq 1_X$, which implies that $r \simeq 1_X$ as well, hence showing that $1_X$ is homotopic to a map $r$ whose image is a single point. Now, in the opposite direction, assume that $1_X$ is homotopic to $r$. Defining the inclusion map $i: Y \to X$, we obtain $r \circ i = 1_Y$ and $i \circ r \simeq 1_X$. Therefore, $X$ and $Y$ are homotopy equivalent, and therefore $X$ is contractible. 
+        </p>
+        <div class="qed">□</div>
+    </div>
   
 </body>
 </html>
