@@ -246,6 +246,19 @@
         </p>
         <div class="qed">□</div>
     </div>
+
+    <p>
+        We will now show that $\mathbb{R}^n$ is contractible. Define $F: \mathbb{R}^n \times I \to \mathbb{R}^n$ where $F(x,t)=tx$. It is clear that $f_1(x) = F(x,1)= x=1_X$ and $f_0(x)=F(x,0)=0$. Therefore, $f_1 \simeq f_0$, so by Proposition 2, $\mathbb{R}^n$ is contractible. 
+    </p>
+
+    <p>
+        Additionally, it follows that $S^{n-1}$, which is the $n-1$-dimensional sphere (for example, the 2-dimensional sphere is the sphere you are familiar with), and $\mathbb{R}^n - \{0\}$ are homotopy equivalent. Let $i: S^{n-1} \to \mathbb{R}^n - \{0\}$ be the inclusion map, and let $r: \mathbb{R}^n - \{0\} \to S^{n-1}$ be the following expression:
+        $$ r(x) = \frac{x}{\|x\|} $$
+        We can clearly see that $r\circ i = 1$, and $i \circ r \simeq 1$ through the homotopy $F: (\mathbb{R}^n - \{0\}) \times I \to \mathbb{R}^n - \{0\}$, where
+        $$ F(x,t)=tx+(1-t)\frac{x}{\|x\|}$$
+        It is clear that $f_0(x)=F(x,0)=(i \circ r)(x)$ and $f_1(x)=F(x,1)=1(x)$. Therefore, $i \circ r \simeq 1$ and $r \circ i \simeq 1$, so $S^{n-1}\simeq \mathbb{R}^n - \{0\}$. 
+        <div class="qed">□</div>
+    </p>
   
 </body>
 </html>
