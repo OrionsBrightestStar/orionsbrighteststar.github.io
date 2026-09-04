@@ -62,65 +62,33 @@
 
     <h2>1. A Bit About My Day Today</h2>
 
-    <p>Luckily, I got to wake up late today. I ate breakfast, which was pancakes for today. After that, I decided it was best that I do laundry today. I have so much laundry that needs to be washed, I could only put a fraction of it in the washing machine. Anyways, while I did that, I began to work on my topology problem set. Most of the problems are fairly straightforward, but a couple of them are a little bit challenging. This is to be expected.</p>
+    
+    
+    <h2>2. Homotopy III</h2>
 
-    <p>Before I got lunch, I had Latin class today. Latin is an extremely easy course so far. This I am incredibly grateful for. Since I have learned Latin from high school and still remember much of the grammar, I am very much ahead of most of the class in that regard. When the teacher handed out a sheet of paper to practice Latin, I finished all 20 questions before people could even finish 10, and began to work on the exercises due next week.</p>
+    <p>Based on the Reparametrization Lemma from yesterday's blog entry, we obtain the following proposition:</p>
 
-    <p>After that, I grabbed pizza at the RoMa dining hall. Then, it was time for my writing seminar: Imagined Geographies. I am, I will not lie, a little bit scared of this class. It seems I am fated to get a B in this course. But maybe I should accept that; in life, I will not be getting "A"s all of the time. Anyways, we began to discuss a couple of maps that Osha (my instructor does not wish to be called Professor or Dr) picked out; one of them was familiar to most of us, one was not. As it turned out, they both represented the same thing, just in two different representations.</p>
-
-    <p>I was really tired after that, and I missed the topology seminar because the writing seminar lasted so damn long; in fact, it went like ten minutes beyond the stated end time. But that is okay. I took a nap, and therefore missed dinner. I was supposed to attend this FYRE event (I am not even sure what that is) on sustainability, but it seemed really lame so I left the premises with a group of other people. I went to the Princeton University store and bought a pack of bottled water (I prefer that to the water in my hall). I am glad to have a source of water that doesn't taste that bad.</p>
-
-    <p>I also finished the writing seminar's module on AI and other items related to that. This did not require much time or effort from me, and was not graded. Anyways, that's about it for me today. It's time for me to study a little bit of homotopy.</p>
-
-    <h2>2. Homotopy II</h2>
-
-    <p>We now consider the notion of a strong deformation retract, which is sort of like a subset of a topological space that the topological space can morph, or retract, into. There are some more specific conditions that we wish to impose, stated formally below.</p>
-
-    <div class="math-box definition">
+    <div class="math-box proposition">
         <div class="box-title">
-            Definition 1 (Strong Deformation Retract)
+            Proposition 1
         </div>
-        <p>A subspace $A$ of a topological space $X$ is known to be a strong deformation retract of $X$ if there exists a homotopy $F: X \times I \to X$, which we call a deformation, such that $$F(x,0)=x$$ $$F(x,1) \in A$$ and $$F(a,t)=a$$ for all $a \in A$ and all $t \in I$. If $F(a,t)=a$ only necessarily for $t = 1$, then $A$ is known as a deformation retract instead.</p>
-    </div>
-
-    <p>Consider the mapping cylinder of a function $f: X \to Y$, which is the topological space $$M_f = Y \cup_{f_0} X \times I$$</p>
-
-    <p>where we have that $f_0(x,0)=f(x).$ In other words, it is the union of the cylinder $X\times I$ and $Y$ stitched together in such a way that one of the edges of $X \times I$ is morphed into the image of $f(X)$ in $Y$. The map $r: M_f \to Y$ which maps each $(x,t)$ to $f_0(x,0)$ and each $y \in Y$ to itself is an example of a strong deformation retraction.</p>
-
-    <p>The definition of a strong deformation retraction sort of lets us ask another interesting question regarding what happens when parts of the topological space remain invariant under a certain homotopy. We introduce the concept of a homotopy being relative to a subset of a topological space like so:</p>
-
-    <div class="math-box definition">
-        <div class="box-title">
-            Definition 2 (Relative)
-        </div>
-        <p>Suppose that $A \subset X$, and $X$ is a topological space. A homotopy $F: X \times I \to Y$ is relative to $A$ (rel $A$) if we have that $F(a,t)$ depends only on $a$, and not $t$, for all $a \in A$. If the homotopy is relative to the whole topological space $X$, then we call it a constant homotopy.</p>
-    </div>
-
-    <p>We may also concatenate homotopies using a rather clever method:</p>
-
-    <div class="math-box definition">
-        <div class="box-title">
-            Definition 3 (Concatenation)
-        </div>
-        <p>If we have homotopies $F: X \times I \to Y$ and $G: X \times I \to Y$ where $F(x,1)=G(x,0)$ for all $x$, then we have a concatenation of $F$ and $G$, denoted $F *G: X \times I \to Y$, constructed as follows: $$(F*G)(x,t)=\begin{cases}F(x,2t) & t \leq \frac{1}{2} \\ G(x,2t-1) & t \geq \frac{1}{2} \\end{cases}</p>
-    </div>
-
-    <p>It should be noted that the homotopies do not have to be connected at $t=1/2$, nor must they have that certain speed. The following lemma illustrates this claim further:</p>
-
-    <div class="math-box lemma">
-        <div class="box-title">
-            Lemma 1 (Reparametrization Lemma)
-        </div>
-        <p>Suppose $\phi_1$ and $\phi_2$ are maps $(I,\partial I) \to (I, \partial I)$ which are equal on $\partial I$. Suppose $F: X \times I \to Y$ is a homotopy and $G_i(x,t) = F(x,\phi_i(t))$ for $i=1,2$. Then we have that $G_1 \simeq G_2 \text{ rel }X \times \partial I$.</p>
+        <p>We necessarily have that $F * C \simeq F \text{ rel } X \times \partial I$, and we also have $C *F \simeq F \text{ rel }X \times \partial I$</p>
     </div>
 
     <div class="math-box proof">
         <div class="box-title">
             Proof.
         </div>
-        <p>Define a homotopy $H: X \times I \times I \to Y$ with $H(x,t,s)=F(x,s\phi_2(t)+(1-s)\phi_1(t))$. Note that $\phi_1(0)=\phi_2(0)$ and $\phi_1(1)=\phi_2(1)$ by our assumptions. Then $$H(x,t,0)=F(x,\phi_1(t))=G_1(x,t)$$ $$H(x,t,1)=F(x,\phi_2(t))=G_2(x,t)$$ $$H(x,0,s) = F(x,\phi_1(0))=G_1(x,0)$$ $$H(x,1,s)=F(x,\phi_2(1))=G_2(x,1)$$</p>
+        <p>Using the Reparametrization Lemma, for the first case, let $\phi_1(t)=2t$ when $t\leq 1/2$ and 1 when $t \geq 1/2$, and $\phi_2(t)=t$, and for the second case, let $\phi_1(t)=0$ when $t\leq 1/2$, and $2t-1$ when $t\geq 1/2$, and then $\phi_2(t)=t$.</p>
+    </div>
 
-        <p>Therefore the two homotopies are homotopic, and the homotopy $H$ remains invariant when $t=0$ or $t=1$ and at any point in $X$ during those conditions, so it is relative to $X \times \partial I$. </p>
+    <p>We can also define an "inverse homotopy," which essentially reverses the homotopy in question, like so:</p>
+
+    <div class="math-box definition">
+        <div class="box-title">
+            Definition 1
+        </div>
+        <p>Suppose we have a homotopy $F: X \times I \to Y$. Define $F^{-1}:X \times I \to Y$ where $F^{-1}(x,t)=F(x,1-t)$.</p>
     </div>
     
 </body>
