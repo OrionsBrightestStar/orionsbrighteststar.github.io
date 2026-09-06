@@ -110,6 +110,13 @@
         </div>
         <p>Suppose $X$ is a complete metric space and $T: X \to X$ is a contraction, which means that for some $K<1$, $\text{dist}$(Tx,Ty)\leq K \cdot \text{dist}(x,y)$ for all $x,y\in X$. It follows that $T$ has a unique fixed point $\zeta \in X$, and for any $x\in X$, $\zeta = \lim_{i \to \infty} T^i(x)$.</p>
     </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+        <p>Suppose we have some $x_0 \in X$, and $x_i = Tx_{i-1}$. If we have that $\delta = \text{dist}(x_0,x_1)$, then we may see by the triangle inequality that $$\text{dist}(x_0,x_k) \leq \text{dist}(x_0,x_1) + \text{dist}(x_1,x_2)+\cdots + \text{dist}(x_{k-1},x_k)$$ which, as distances are always nonnegative, implies $$ \leq \text{dist}(x_0,x_1) + \text{dist}(x_1,x_2) + \cdots + \text{dist}(x_{k-1},x_k) + \cdots$$ and still, since $\text{dist}(Tx,Ty) \leq K \cdot \text{dist}(x,y)$, we have that this implies $$\leq \text{dist}(x_0,x_1)+K \cdot \text{dist}(x_0,x_1) + K^2 \cdot \text{dist}(x_0,x_1)+\cdots$$ which, letting $\delta = \text{dist}(x_0,x_1)$, and combining terms, we obtain $$= \delta (1 + K + K^2 + \cdots)$$ and using the convergence of this specific power series as $K <1$, we obtain $$= \frac{\delta}{1-K}$$ Furthermore, when we have $m \geq n$, $$\text{dist}(x_n,x_m) \leq K \cdot \text{dist}(x_{n-1},x_{m-1})\leq K^2 \cdot \text{dist}(x_{n-2},x_{m-2})$$ $$\leq \cdots \leq K^n \cdot \text{dist}(x_0,x_{m-n}) \leq \frac{\delta K^n}{1-K}$$ As $n\to \infty$, we have that this expression goes to 0, since $K<1$. It therefore follows that $x_0,x_1,x_2,\ldots$ is a Cauchy sequence, and since $X$ is complete, then there exists a $\zeta \in X$ such that $\zeta = \lim_{i\to\infty}x_i$. It is a fixed point, as $T\zeta = \lim_{i\to\infty} T x_i = \lim_{i\to\infty}x_{i+1}=\zeta$. We now prove uniqueness. If $x$ is another fixed point, then we must have that $$\text{dist}(x,\zeta)=\text{dist}(Tx,T\zeta) \leq K \cdot \text{dist}(x,\zeta)$$. Recall that $K<1$, so this implies that the distance is zero, and therefore $x=\zeta$.</p>
+    </div>
     
 </body>
 </html>
