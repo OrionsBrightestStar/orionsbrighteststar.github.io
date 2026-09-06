@@ -74,6 +74,15 @@
         </div>
         <p>Suppose we have a smooth function $f: \mathbb{R}^n \to \mathbb{R}$. If $x=(x_1,\ldots, x_n)$ and $\overline{x}=(\overline{x}_1,\ldots, \overline{x}_n)$, then we have that $$f(x) - f(\overline{x}) = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\tilde{x})(x_i-\overline{x}_i)$$ where $\tilde{x}$ is on the line segment between $x$ and $\overline{x}$.</p>
     </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+        <p>First, we consider the function $\mathbb{R}\to \mathbb{R}$ where $t \mapsto f(tx+(1-t)\overline{x})$. It necessarily follows that, by the single-variable mean value theorem, we have that there exists some $t_0$ between 0 and 1 such that $$f(1x+(1-1)\overline{x})-f(0x+(1-0)\overline{x})=f(x)-f(\overline{x})=\frac{df(tx+(1-t)\overline{x})}{dt}\bigg|_{t=t_0}$$ However, using the Chain Rule, we may find that the right hand side becomes $$\frac{df(tx+(1-t)\overline{x}}{dt}\bigg|_{t=t_0}=\sum_{i=1}^n \frac{\partial f}{\partial x_i}(\tilde{x}) \frac{d(tx_i+(1-t)\overline{x}_i)}{dt}\bigg|_{t=t_0}=\sum_{i=1}^n \frac{\partial f}{\partial x_i}(\tilde{x})(x_i-\overline{x}_i)$$ where we let $\tilde{x} = t_0x+(1-t_0)\overline{x}$. The desired expression follows shortly.</p>
+
+        
+    </div>
     
 </body>
 </html>
