@@ -83,6 +83,24 @@
 
         <div class="qed">□</div>
     </div>
+
+    A corollary extending the Mean Value Theorem to functions where some of the coordinates remain fixed follows shortly.
+
+    <div class="math-box corollary">
+        <div class="box-title">
+            Corollary 1
+        </div>
+        <p>Suppose we have a smooth function $f: \mathbb{R}^k \times \mathbb{R}^m \to \mathbb{R}$ where $x\in \mathbb{R}^k$ and $y,\overline{y} \in \mathbb{R}^m$. Then we have $$f(x,y)-f(x,\overline{y})=\sum_{i=1}^m \frac{\partial f}{\partial y_i}(x,\tilde{y})(y_i-\overline{y}_i)$$ where $\tilde{y}$ is on the line segment between $y$ and $\overline{y}$.</p>
+    </div>
+
+    <div class="math-box proof">
+        <div class="box-title">
+            Proof.
+        </div>
+        <p>By the Mean Value Theorem, we have that $$f(x,y)-f(x,\overline{y})=\sum_{i=1}^k \frac{\partial f}{\partial x_i}(x,\tilde{y}) (x_i-x_i) + \sum_{i=1}^m \frac{\partial f}{\partial y_i}(x,\tilde{y})(y_i-\overline{y}_i)$$ However, note that $x_i-x_i=0$, so $$\sum_{i=1}^k \frac{\partial f}{\partial x_i}(x,\tilde{y}) (x_i-x_i)$$ must therefore be equal to zero. Hence, $$f(x,y)-f(x,\overline{y}) = \sum_{i=1}^m \frac{\partial f}{\partial y_i}(x,\tilde{y})(y_i-\overline{y}_i)$$</p>
+
+        <div class="qed">□</div>
+    </div>
     
 </body>
 </html>
