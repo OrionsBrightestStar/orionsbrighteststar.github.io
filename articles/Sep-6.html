@@ -136,6 +136,17 @@
         <p>Let us assume that $\zeta = 0$, $\eta = 0$, and $f(0,0)=0$. We may be able to do so by transforming our coordinates appropriately. Now, apply Corollary 1 to each $f_i$, and using the assumption that since $\partial f_i/\partial y_i = 0$ at the origin, it is "small" in some neighborhood of the origin, there exists some $a>0$ and $b>0$ such that $$\| f(x,y) - f(x,\overline{y})\| < K \|y - \overline{y}\|$$ where $\|x\|\leq a$, $\|y\|\leq b$, and $\|\overline{y}\|\leq b$. Furthermore, if $a$ is even smaller, we may be able to have that $$Kb + \|f(x,0)\| \leq b$$ since $Kb < b$. Now consider the set $\textbf{F}$ of all functions $\phi: A \to B$ where $\phi(0)=0$. Let $\text{dist}(\phi,\psi) = \sup\{\|\phi(x)-\psi(x)\|\mid x \in A\}$. This metric space is complete. Furthermore, define $T: \textbf{F}\to \textbf{F}$ where $(T\phi)(x)=f(x,\phi(x))$. Note that $(T\phi)(0)=f(0,\phi(0))=f(0,0)=0$, and $$\|(T\phi)(x)\|=\|f(x,\phi(x))\|\leq \|f(x,\phi(x))-f(x,0)\|+\|f(x,0)\|$$ $$ \leq K \|\phi(x)\| + \|f(x,0)\|$$ $$ \leq Kb + \|f(x,0)\| \leq b$$ and so $(T\phi)(x) \in B$, as its norm is less than $b$. $T$ is a contraction, but I am too lazy to go through all the calculations for that. Therefore, by the Banach Principle, we may find a unique $\phi$ such that $\phi(0)=0$ and $T\phi= \phi$, or $f(x,\phi(x))=\phi(x)$ for all $x \in A$. Furthermore, $\phi = \lim \phi_i$ where $\phi_0$ is arbitrary, and $\phi_i$ is defined like in the Banach Contraction Principle. If we have $\phi_0(x)=0$, then all $\phi_i$ will be continuous because $f$ is continuous. Therefore, $\phi$ is a uniform limit of continuous functions, and is therefore continuous.</p>
         <div class="qed">□</div>
     </div>
+
+    <p>I do not think that I will be providing the entire proof of the Implicit Function Theorem here, because it is two pages long and I do not want to write all of that down. However, I will state it in full:</p>
+
+    <div class="math-box theorem">
+        <div class="box-title">
+            Theorem 3 (The Implicit Function Theorem)
+        </div>
+        <p>Suppose we have a continuous $g: \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^m$, and $g(\zeta, \eta)=0$. Suppose that the Jacobian determinant of the composition $$y \mapsto (\zeta, y) \mapsto g(\zeta,y)$$ is nonzero. Then there are some $a>0$, $b>0$ such that there exists a unique function $ \phi: A \to B$ where $\phi(\zeta) = \eta$, and $g(x,\phi(x))=0$ for all $x \in A$. Additionally, if $g$ is $C^p$, which means it has up to $p$ continuous derivatives, then so is $\phi$. This includes the case where $p = \infty$.</p>
+    </div>
+
+    <p>The Implicit Function Theorem essentially tells us under which conditions does there exist an appropriate function $y(x)$ such that at some point, there is a neighborhood around which $y$ may satisfy some relation (that is, $g(x,y(x))$).</p>
     
 </body>
 </html>
