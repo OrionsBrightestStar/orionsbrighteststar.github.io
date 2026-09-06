@@ -143,10 +143,17 @@
         <div class="box-title">
             Theorem 3 (The Implicit Function Theorem)
         </div>
-        <p>Suppose we have a continuous $g: \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^m$, and $g(\zeta, \eta)=0$. Suppose that the Jacobian determinant of the composition $$y \mapsto (\zeta, y) \mapsto g(\zeta,y)$$ is nonzero. Then there are some $a>0$, $b>0$ such that there exists a unique function $ \phi: A \to B$ where $\phi(\zeta) = \eta$, and $g(x,\phi(x))=0$ for all $x \in A$. Additionally, if $g$ is $C^p$, which means it has up to $p$ continuous derivatives, then so is $\phi$. This includes the case where $p = \infty$.</p>
+        <p>Suppose we have a differentiable $g: \mathbb{R}^n \times \mathbb{R}^m \to \mathbb{R}^m$, and $g(\zeta, \eta)=0$. Suppose that the Jacobian determinant of the composition $$y \mapsto (\zeta, y) \mapsto g(\zeta,y)$$ is nonzero. Then there are some $a>0$, $b>0$ such that there exists a unique function $ \phi: A \to B$ where $\phi(\zeta) = \eta$, and $g(x,\phi(x))=0$ for all $x \in A$. Additionally, if $g$ is $C^p$, which means it has up to $p$ continuous derivatives, then so is $\phi$. This includes the case where $p = \infty$.</p>
     </div>
 
     <p>The Implicit Function Theorem essentially tells us under which conditions does there exist an appropriate function $y(x)$ such that at some point, there is a neighborhood around which $y$ may satisfy some relation (that is, $g(x,y(x))$).</p>
+
+    <div class="math-box theorem">
+        <div class="box-title">
+            Theorem 4 (The Inverse Function Theorem)
+        </div>
+        <p>Suppose that we have $\theta: \mathbb{R}^m \to \mathbb{R}^m$ be $C^1$, where $\theta(\eta)=\zeta$ and the differential at $\eta$ is nonsingular, so the Jacobian determinant is nonzero at that point. Then there exist $a>0$ and $b>0$ such that there is a function $\phi: A \to B$, defined in the previous manner, where $\phi(\zeta)=\eta$ and $\theta(\phi(x))=x$ for all $x \in A$. Also, $\phi$ is $C^p$ when $\theta$ is $C^p$. </p>
+    </div>
     
 </body>
 </html>
