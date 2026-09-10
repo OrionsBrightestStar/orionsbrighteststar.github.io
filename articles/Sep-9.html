@@ -52,7 +52,7 @@
 
     <p><a href="Sep-6.html">Read my previous blog entry here!</a></p>
 
-    <h1>September 9, 2026: Sard's Theorem and Regular Values and Local Properties of Immersions and Submersions</h1>
+    <h1>September 9, 2026: Sard's Theorem and Regular Values</h1>
 
     <p>
         <em>Geometry · Blog Entry</em>
@@ -127,8 +127,6 @@
         <p>Suppose $p(x+iy) = u(x,y)+iv(x,y)$. Differentiating, we get $p'(z)=(u_x+iv_x)=-i(u_y+iv_y)$, as we may be able to differentiate the expression with respect to $x$ and $y$ and equate the two. It follows that the Jacobian $J(u,v;x,y) = u_x^2 + u_y^2$ is zero if and only if $p'(z)=0$. It follows that there are only a finite number of points (which are zeros of $p'$) that can satisfy this, so $p: \mathbb{R}^2 \to \mathbb{R}^2$ has only a finite number of critical points, the set of which we shall denote by $F$. Now, suppose $p(z) = a_0 z^n + a_1 z^{n-1}+ \cdots  + a_n$ such that $a_0 \not = 0$. We have that $$ |p(z)| = |z|^n |a_0 + a_1 z^{-1}+\cdots + a_n z^{-n}|$$ shows that as $|z| \to \infty$, then $|p(z)| \to \infty$. So, we may extend $p$ continuously to the one-point compactification $S^2$ of $\mathbb{R}^2$. This allows each compact subset of $S^2$ to have a compact image, and so $p$ is by definition a proper map. It is an earlier result from the textbook that it follows that $p$ is a closed mapping. Now, we have that $p^{-1}(c)$ consists of the zeros of the polynomial $p(z)-c$, and so may contain at most $n$ points (I guess it is a result we may use that a polynomial has at most its degree in terms of roots). Suppose $k = k(c)$ be the number of points in $p^{-1}(c)$. Then, if $c$ is regular and $p^{-1}(c) = \{z_1,\ldots, z_k\}$, then we may say that each $z_i$ has a neighborhood $U_i$ which is diffeomorphic to a neighborhood $V_i \subset \mathbb{R}^2 - F$ of $c$. Note that $\mathbb{R}^2$ is Hausdorff, so let $U_i$ be disjoint. Consider that there exists an open connected neighborhood $V$ of $c$ inside the very complicated looking open set $V_1 \cap \cdots \cap V_k - f(\mathbb{R}^2 - (U_1 \cup \cdots \cup U_k))$. Let $W_i = U_i \cap p^{-1}(V)$. This is diffeomorphic by $p$ onto $V$. We also have that $p^{-1}(V) = W_1 \cup \cdots \cup W_k$, which are each disjoint. Therefore, $k(c)$ is locally constant on $\mathbb{R}^2 - F$, but $\mathbb{R}^2 - F$ is connected, so $k(c)$ is constant on $\mathbb{R}^2 - F$. It is nonzero, but the image of $p$ must contain $\mathbb{R}^2$, and to be honest this book has completely lost me. Why is Bredon like this? I think even Milnor's treatment of the Fundamental Theorem of Algebra was more clear.</p>
         <div class="qed">□</div>
     </div>
-
-    <h2>3. Local Properties of Immersions and Submersions</h2>
     
 </body>
 </html>
