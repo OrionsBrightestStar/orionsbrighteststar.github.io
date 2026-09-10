@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>September 6, 2026</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- MathJax -->
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+
+    <script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js">
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="../index.html">HOME</a>
+        &nbsp; | &nbsp;
+        <a href="../articles/analysis.html">ANALYSIS</a>
+        &nbsp; | &nbsp;
+        <a href="../articles/algebra.html">ALGEBRA</a>
+        &nbsp; | &nbsp;
+        <a href="../articles/geometry.html">GEOMETRY</a>
+        &nbsp; | &nbsp;
+        <a href="../articles/topology.html">TOPOLOGY</a>
+        &nbsp; | &nbsp;
+        <a href="../articles/physics.html">PHYSICS</a>
+        &nbsp; | &nbsp;
+        <a href="../articles/blog.html">BLOG</a>
+    </nav>
+
+    <hr>
+
+    <p><a href="Sep-4.html">Read my previous blog entry here!</a></p>
+
+    <h1>September 6, 2026: The Implicit Function Theorem</h1>
+
+    <p>
+        <em>Geometry · Blog Entry</em>
+    </p>
+
+    <hr>
+
+    <h2>1. A Bit About My Day Today</h2>
+
+
+    
+    <h2>2. Sard's Theorem and Regular Values</h2>
+
+    <p>We begin with the notion of a critical point, which is a generalization of the concept of a critical point from single-variable calculus. The image of such is called a critical value, and any point that is not a critical value is considered regular.</p>
+
+    <div class="math-box definition">
+      <div class="box-title">
+        Definition 1 (Critical Point/Value)
+      </div>
+      <p>Suppose $\phi: M^m \to N^n$ is a smooth map. We say a point $p \in M^m$ is a critical point of $\phi$ if $\phi_*: T_p(M) \to T_{\phi(p)}(N)$ has rank less than $n$. The image of a critical point in $N^n$ is called a critical value. Any point in $N^n$ that is not a critical value is called a regular value, even if it is not in the image of $\phi$.</p>
+    </div>
+
+    <p>We now approach one of the main results regarding regular values, the proof of which requires some measure theory, and so will not be provided here. The interested reader is directed to Appendix C of Bredon's Topology and Geometry for further information.</p>
+
+    <div class="math-box theorem">
+      <div class="box-title">
+        Theorem 1 (Sard's Theorem)
+      </div>
+      <p>If $\phi: M^m \to \mathbb{R}^n$ is a smooth map, then the set of critical values has measure zero; that is, we can cover the set of critical values with a countable number of intervals of arbitrarily small length.</p>
+    </div>
+
+    <p>A corollary swiftly follows from Sard's Theorem.</p>
+
+    <div class="math-box corollary">
+      <div class="box-title">
+        Corollary 1 (A.B. Brown)
+      </div>
+      <p>Suppose that $\phi: M^m \to N^n$ is smooth. Then the set of regular values is residual in $N^n$.</p>
+    </div>
+
+    <div class="math-box proof">
+      <div class="box-title">
+        Proof.
+      </div>
+      <p>Suppose $C$ is the critical set of $\phi$ (that is, the set of critical points), and $K \subset M$ is a compact set. It naturally follows that $\phi(C \cap K)$ is compact and has empty interior, due to Sard's Theorem. It naturally follows from elementary properties in real analysis that $\phi(C \cap K)$ is nowhere dense in the codomain $N$. $M$ may be covered by a countable number of such compact $K$, so $\phi(C)$ is of first category (that is, it can be covered by a countable number of nowhere dense sets), and so its complement is residual (I still have no idea what residual means).</p>
+    </div>
+    
+</body>
+</html>
